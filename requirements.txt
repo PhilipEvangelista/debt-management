@@ -1,4 +1,4 @@
-﻿argon2-cffi==21.3.0
+p﻿argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
 asgiref==3.5.0
 asttokens==2.0.5
@@ -9,7 +9,7 @@ cffi==1.15.0
 colorama==0.4.4
 debugpy==1.5.1
 decorator==5.1.1
-pypiwin32==223
+pypiwin32==303
 defusedxml==0.7.1
 distlib==0.3.4
 dj-database-url==0.5.0
@@ -57,7 +57,7 @@ Pygments==2.11.2
 pyparsing==3.0.7
 pyrsistent==0.18.1
 python-dateutil==2.8.2
-pywinpty==2.0.1
+pywinpty==2.0.5
 pyzmq==22.3.0
 qtconsole==5.2.2
 QtPy==2.0.1
