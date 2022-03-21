@@ -9,7 +9,6 @@ cffi==1.15.0
 colorama==0.4.4
 debugpy==1.5.1
 decorator==5.1.1
-pypiwin32==303
 defusedxml==0.7.1
 distlib==0.3.4
 dj-database-url==0.5.0
