@@ -1,7 +1,7 @@
 .list-client{
     overflow: scroll;
     border: 2px groove;
-    width: 25%;
+    width: 50%;
     height: 400px;
     position: absolute;
     left: 7%;
