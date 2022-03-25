@@ -77,6 +77,7 @@ def update(response, pk):
             ls.balance -= float(response.POST['get-amount'])
         if float(response.POST['get-amount']) >= ls.balance / 4:
             ls.date = timezone.now()
+            ls.interest_bool = True
         ls.save()
         return redirect("owner")
     return render(response, "update.html", {"item": ls, 'time': datetime.date.today()})
@@ -96,7 +97,7 @@ def active():
         sm = Information.objects.get(id=i.id)
         date = monthrange(sm.date.year, sm.date.month)
         date_now = datetime.date.today() - sm.date.date()
-        if i.interest_bool and date_now.days > date[1]:
+        if sm.interest_bool and date_now.days > date[1]:
             interest = datetime.date.today() - sm.date.date()
             interest = interest.days - date[1]
             balance = interest + sm.balance
@@ -106,7 +107,7 @@ def active():
             sm.interest_bool = False
         else:
             date = datetime.date.today() - sm.date_debts.date()
-            if date.days > 0:
+            if not sm.interest_bool and date.days > 0:
                 interest = date.days + sm.interest
                 balance = date.days + sm.balance
                 sm.balance = balance
