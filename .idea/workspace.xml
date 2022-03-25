@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91cbd546-dd1e-4390-828c-b11f942fdb52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Debt_Management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Debt_Management.iml" afterDir="false" />
+    <list default="true" id="91cbd546-dd1e-4390-828c-b11f942fdb52" name="Changes" comment="commit_interest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debt_Management/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Debt_Management/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nav_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav_bar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +24,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="26h2hHuBG7D7JPl0HevX12Ty3Qp" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -97,8 +100,16 @@
       <updated>1647861678845</updated>
       <workItem from="1647861697383" duration="329000" />
       <workItem from="1648216305231" duration="2039000" />
-      <workItem from="1648218843905" duration="931000" />
+      <workItem from="1648218843905" duration="6656000" />
     </task>
+    <task id="LOCAL-00001" summary="commit_interest">
+      <created>1648220031460</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648220031460</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,5 +125,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit_interest" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit_interest" />
   </component>
 </project>

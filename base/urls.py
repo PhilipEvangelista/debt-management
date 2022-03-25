@@ -11,5 +11,6 @@ urlpatterns = [
     path("edit/<str:pk>/", views.edit, name='edit-item'),
     path("update/<str:pk>?", views.update, name="update-item"),
     path("delete/<str:pk>?", views.delete, name="delete-item"),
-    path("create-account/", views.create, name="create-account")
+    path("create-account/", views.create, name="create-account"),
+    path("History/", views.history, name='history')
 ]

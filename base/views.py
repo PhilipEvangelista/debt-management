@@ -67,14 +67,30 @@ def edit(response, pk):
     return render(response, 'edit.html', {'forms': form})
 
 
+def history(response):
+    ls = History.objects.all()
+    return render(response, 'history.html', {'item': ls})
+
+
 def update(response, pk):
     active()
     ls = Information.objects.get(id=pk)
+    ks = History.objects.filter(name=ls.name)
+
     if response.method == "POST":
         if response.POST['get_option'] == 'Add Debts':
+
+            balance = ls.balance + float(response.POST['get-amount'])
+            ks.create(name=ls.name, date=timezone.now(), current_balance=ls.balance,
+                      new_balance=balance, select=response.POST['get_option'])
             ls.balance += float(response.POST['get-amount'])
         else:
+
+            balance = ls.balance - float(response.POST['get-amount'])
+            ks.create(name=ls.name, date=timezone.now(), current_balance=ls.balance,
+                      new_balance=balance, select=response.POST['get_option'])
             ls.balance -= float(response.POST['get-amount'])
+
         if float(response.POST['get-amount']) >= ls.balance / 4:
             ls.date = timezone.now()
             ls.interest_bool = True

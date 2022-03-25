@@ -3,8 +3,12 @@ from django.utils import timezone
 # Create your models here.
 
 
-class Name(models.Model):
+class History(models.Model):
+    select = models.CharField(max_length=15, default='Add Debts')
     name = models.CharField(max_length=200)
+    date = models.DateTimeField(default=timezone.now)
+    current_balance = models.FloatField(default=0)
+    new_balance = models.FloatField(default=0)
 
     def __str__(self):
         return self.name
