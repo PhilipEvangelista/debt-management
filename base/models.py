@@ -9,6 +9,7 @@ class History(models.Model):
     date = models.DateTimeField(default=timezone.now)
     current_balance = models.FloatField(default=0)
     new_balance = models.FloatField(default=0)
+    payment = models.FloatField(default=0)
 
     def __str__(self):
         return self.name
@@ -34,3 +35,17 @@ class Security(models.Model):
 
     def __str__(self):
         return self.username
+
+
+class Bitcoin(models.Model):
+    name = models.CharField(max_length=200)
+    price = models.FloatField(default=0)
+    currency = models.FloatField(default=0)
+    current = models.FloatField(default=0)
+    status = models.CharField(max_length=25, default='Increase')
+    rank = models.IntegerField(default=1)
+    url = models.CharField(max_length=500, default="https://www.coingecko.com/en/coins/plant-vs-undead-token/php")
+
+    def __str__(self):
+        return self.name
+

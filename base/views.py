@@ -1,4 +1,6 @@
 import datetime
+from bs4 import BeautifulSoup
+import requests
 
 from django.shortcuts import render, redirect
 from .models import *
@@ -79,16 +81,18 @@ def update(response, pk):
 
     if response.method == "POST":
         if response.POST['get_option'] == 'Add Debts':
-
+            ls.amount = float(response.POST['get-amount'])
             balance = ls.balance + float(response.POST['get-amount'])
             ks.create(name=ls.name, date=timezone.now(), current_balance=ls.balance,
-                      new_balance=balance, select=response.POST['get_option'])
+                      new_balance=balance, select=response.POST['get_option'],
+                      payment=float(response.POST['get-amount']))
             ls.balance += float(response.POST['get-amount'])
         else:
-
+            ls.amount = float(response.POST['get-amount'])
             balance = ls.balance - float(response.POST['get-amount'])
             ks.create(name=ls.name, date=timezone.now(), current_balance=ls.balance,
-                      new_balance=balance, select=response.POST['get_option'])
+                      new_balance=balance, select=response.POST['get_option'],
+                      payment=float(response.POST['get-amount']))
             ls.balance -= float(response.POST['get-amount'])
 
         if float(response.POST['get-amount']) >= ls.balance / 4:
@@ -140,3 +144,28 @@ def create(response):
             forms.save()
             return redirect("home")
     return render(response, "create.html", {'form': forms})
+
+
+def bitcoin(response):
+    ls = Bitcoin.objects.all()
+    for i in ls:
+        url = i.url
+        r = requests.get(url)
+        soup = BeautifulSoup(r.text, 'html.parser')
+        price = soup.find("span", class_="tw-text-gray-900 dark:tw-text-white tw-text-3xl")
+        i.price = float(price.text.replace("₱", ""))
+        rank = soup.find("div", class_="tw-inline-flex tw-items-center tw-px-2 tw-py-0.5 tw-rounded-md tw-text-xs"
+                                       " tw-font-medium tw-bg-gray-800 tw-text-gray-100 tw-mb-1 md:tw-mb-0 md:tw-mt-0"
+                                       " dark:tw-bg-gray-600 dark:tw-bg-opacity-40")
+        i.rank = int(rank.text.replace("Rank #", ""))
+        currency = soup.find("span", class_='live-percent-change tw-ml-2 tw-text-xl').text
+        i.currency = float(currency.strip().replace("%", ''))
+        if i.currency > i.current:
+            i.status = 'Increased'
+        elif i.currency == i.current:
+            i.status = "No Changes"
+        else:
+            i.status = "Decreased"
+        i.current = i.currency
+        i.save()
+    return render(response, 'bitcoin.html', {'ls': ls})

@@ -4,3 +4,4 @@ from . import models
 admin.site.register(models.Information)
 admin.site.register(models.History)
 admin.site.register(models.Security)
+admin.site.register(models.Bitcoin)

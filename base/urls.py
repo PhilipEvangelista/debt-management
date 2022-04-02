@@ -12,5 +12,6 @@ urlpatterns = [
     path("update/<str:pk>?", views.update, name="update-item"),
     path("delete/<str:pk>?", views.delete, name="delete-item"),
     path("create-account/", views.create, name="create-account"),
-    path("History/", views.history, name='history')
+    path("History/", views.history, name='history'),
+    path("Crypto Currency", views.bitcoin, name='bitcoin')
 ]

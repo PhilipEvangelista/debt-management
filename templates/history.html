@@ -9,6 +9,7 @@
             <th>Name</th>
             <th>Date</th>
             <th>Current Balance</th>
+            <th>Amount</th>
             <th>New Balance</th>
             <th>Option</th>
         </tr>
@@ -16,8 +17,9 @@
         <tr>
             <td>{{ i.name }}</td>
             <td>{{ i.date.date }}</td>
-            <td>{{ i.current_balance }}</td>
-            <td>{{ i.new_balance }}</td>
+            <td>₱ {{ i.current_balance }}</td>
+            <td>₱ {{ i.payment }}</td>
+            <td>₱ {{ i.new_balance }}</td>
             <td>{{ i.select }}</td>
         </tr>
         {%endfor%}
