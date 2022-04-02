@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91cbd546-dd1e-4390-828c-b11f942fdb52" name="Changes" comment="commit_interest1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debt_Management/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Debt_Management/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nav_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav_bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/update.html" afterDir="false" />
-    </list>
+    <list default="true" id="91cbd546-dd1e-4390-828c-b11f942fdb52" name="Changes" comment="commit_interest1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +114,7 @@
       <workItem from="1648390120901" duration="97000" />
       <workItem from="1648463625071" duration="2364000" />
       <workItem from="1648613582677" duration="431000" />
-      <workItem from="1648880533155" duration="14995000" />
+      <workItem from="1648880533155" duration="15510000" />
     </task>
     <task id="LOCAL-00001" summary="commit_interest">
       <created>1648220031460</created>
@@ -155,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648227615787</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="commit_interest1">
+      <created>1648896988953</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648896988962</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
